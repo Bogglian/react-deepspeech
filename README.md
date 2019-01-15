@@ -1,8 +1,11 @@
 # react-DeepSpeech
+It started in Jan 14, 2019
 
-React component using morzilla DeepSpeech.
+this is component using react and morzilla/DeepSpeech.
 
 ## 💡 Motivation
+
+No one made a valid repository for DeepSpeech and we made it our own.
 
 ## 🏃‍♀️🏃‍♂️QuickStart
 
