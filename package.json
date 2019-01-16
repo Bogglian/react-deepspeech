@@ -1,8 +1,32 @@
 {
   "name": "react-deepspeech",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
+  "keywords": [
+    "deepspeech",
+    "speech",
+    "stt",
+    "sound-to-text",
+    "speech-to-text",
+    "react",
+    "react-component"
+  ],
+  "contributors": [
+    {
+      "name": "Myungjin Ko",
+      "email": "gmj1197@gmail.com"
+    },
+    {
+      "name": "Jihun Ho",
+      "email": "hojihun5516@gmail.com"
+    },
+    {
+      "name": "Kilhwan Kang",
+      "email": "rlfghksop@naver.com"
+    }
+  ],
   "dependencies": {
+    "deepspeech": "^0.4.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
@@ -13,6 +37,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Bogglian/react-DeepSpeech.git"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -21,5 +49,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "license": "MPL-2.0"
 }
