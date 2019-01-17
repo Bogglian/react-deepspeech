@@ -4,9 +4,15 @@
 
 [![NPM](https://nodei.co/npm/react-deepspeech.png)](https://npmjs.org/package/react-deepspeech)
 
+## What is the react-DeepSpeech?
+
 It started in Jan 14, 2019
 
 this is component using react and morzilla/DeepSpeech.
+
+## :sweat: Sorry for users
+
+>  this is not yet built the publish version. 
 
 ## 💡 Motivation
 
