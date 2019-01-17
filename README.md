@@ -1,4 +1,9 @@
-# react-DeepSpeech
+# react-DeepSpeech[![npm](https://img.shields.io/npm/v/react-DeepSpeech.svg)]()
+
+[![npm downloads](https://img.shields.io/npm/dm/react-DeepSpeech.svg)](https://www.npmjs.com/package/react-deepspeech)
+
+[![NPM](https://nodei.co/npm/react-deepspeech.png)](https://npmjs.org/package/react-deepspeech)
+
 It started in Jan 14, 2019
 
 this is component using react and morzilla/DeepSpeech.

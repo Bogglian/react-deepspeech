@@ -80,7 +80,13 @@
     "webpack": "4.19.1",
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.3"
+    "workbox-webpack-plugin": "3.6.3",
+    "deepspeech": "^0.4.1",
+    "sox-stream": "^2.0.3",
+    "fs": "^0.0.1-security",
+    "memory-stream": "0.0.3",
+    "node-wav": "0.0.2",
+    "node-pre-gyp": "0.12.x"
   },
   "scripts": {
     "start": "node scripts/start.js",
