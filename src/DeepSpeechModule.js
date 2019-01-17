@@ -8,8 +8,8 @@ const Wav = require("node-wav");
 const Duplex = require("stream").Duplex;
 const util = require("util");
 
-export function deepSpeech(audio){
-  var complete="";
+export function deepSpeech(audio) {
+  var complete = "";
   // These constants control the beam search decoder
 
   // Beam width used in the CTC decoder when building candidate transcriptions
@@ -120,5 +120,5 @@ export function deepSpeech(audio){
       audioLength.toPrecision(4)
     );
   });
- return complete
-};
+  return complete;
+}
