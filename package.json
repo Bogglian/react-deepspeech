@@ -1,6 +1,6 @@
 {
   "name": "react-deepspeech",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "keywords": [
     "deepspeech",
@@ -11,6 +11,11 @@
     "react",
     "react-component"
   ],
+  "author": "Rayleigh Ko <gmj1197@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Bogglian/react-DeepSpeech/issues"
+  },
+  "homepage": "https://github.com/Bogglian/react-DeepSpeech",
   "contributors": [
     {
       "name": "Myungjin Ko",
