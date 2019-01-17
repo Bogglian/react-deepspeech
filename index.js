@@ -1,1 +1,1 @@
-module.exports = require("src/DeepSpeech");
+module.exports = require("./build/index.js");

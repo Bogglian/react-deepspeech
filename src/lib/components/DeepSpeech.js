@@ -40,4 +40,4 @@ class DeepSpeech extends Component {
   }
 }
 
-export default DeepSpeech;
+export { DeepSpeech };
