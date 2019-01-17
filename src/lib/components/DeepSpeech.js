@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./deepspeech.css";
-import ds from "./DeepSpeechModule";
+import * as api from "./DeepSpeechModule.js";
 
 class DeepSpeech extends Component {
   state ={
@@ -14,8 +14,7 @@ class DeepSpeech extends Component {
     console.log('asdf'+this.state.file)
   }
   submit=()=>{
-    var temp = ds(this.state.file);
-    console.log(temp);
+    var complete = api.deepSpeech(this.state.file);
     console.log('submit')
   }
   
@@ -23,6 +22,7 @@ class DeepSpeech extends Component {
     return (
       <form>
         <div>
+	
           <label for="fileUpload">UPLOAD</label>
           <input
             type="file"
