@@ -32,12 +32,12 @@ export function deepSpeech(audio) {
   const N_CONTEXT = 9;
 
   // for DeepSpeech Model in src/models
-  const MODEL = "../../boggler/models/output_graph.pb";
-  const ALPHABET = "../../boggler/models/alphabet.txt";
-  const LM = "../../boggler/models/lm.binary";
-  const TRIE = "../../boggler/models/trie";
-  //경로바꿔야함
-  const AUDIO = "../../boggler/public/upload/31d24379";
+  const MODEL = "../models/output_graph.pb";
+  const ALPHABET = "../models/alphabet.txt";
+  const LM = "../models/lm.binary";
+  const TRIE = "../models/trie";
+
+  const AUDIO = "../audio/4507-16021-0012.wav";
 
   function totalTime(hrtimeValue) {
     return (hrtimeValue[0] + hrtimeValue[1] / 1000000000).toPrecision(4);
