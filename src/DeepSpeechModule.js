@@ -1,3 +1,4 @@
+//#!/usr/bin/env node
 
 const Fs = require("fs");
 const Sox = require("sox-stream");
@@ -7,7 +8,8 @@ const Wav = require("node-wav");
 const Duplex = require("stream").Duplex;
 const util = require("util");
 
-module.exports = function(audio) {
+export function deepSpeech(audio){
+  var complete="";
   // These constants control the beam search decoder
 
   // Beam width used in the CTC decoder when building candidate transcriptions
@@ -30,12 +32,12 @@ module.exports = function(audio) {
   const N_CONTEXT = 9;
 
   // for DeepSpeech Model in src/models
-  const MODEL = "./models/output_graph.pb";
-  const ALPHABET = "./models/alphabet.txt";
-  const LM = "./models/lm.binary";
-  const TRIE = "./models/trie";
+  const MODEL = "../../boggler/models/output_graph.pb";
+  const ALPHABET = "../../boggler/models/alphabet.txt";
+  const LM = "../../boggler/models/lm.binary";
+  const TRIE = "../../boggler/models/trie";
   //경로바꿔야함
-  const AUDIO = `${audio}`;
+  const AUDIO = "../../boggler/public/upload/31d24379";
 
   function totalTime(hrtimeValue) {
     return (hrtimeValue[0] + hrtimeValue[1] / 1000000000).toPrecision(4);
@@ -109,14 +111,14 @@ module.exports = function(audio) {
     // We take half of the buffer_size because buffer is a char* while
     // LocalDsSTT() expected a short*
 
-    let result = model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000);
-    console.log(result);
+    complete = model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000);
+    console.log(complete);
     const inference_stop = process.hrtime(inference_start);
     console.error(
       "Inference took %ds for %ds audio file.",
       totalTime(inference_stop),
       audioLength.toPrecision(4)
     );
-    return result;
   });
+ return complete
 };
