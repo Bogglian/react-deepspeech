@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { DeepSpeech } from "../lib";
+import React, { Component } from 'react';
+import { DeepSpeech } from '../lib';
 
 class App extends Component {
   render() {
@@ -8,4 +8,3 @@ class App extends Component {
 }
 
 export default App;
-

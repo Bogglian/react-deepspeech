@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import "./deepspeech.css";
-import * as api from "../../deepSpeechModule.js";
+import React, { Component } from 'react';
+import './deepspeech.css';
+import * as api from '../../deepSpeechModule.js';
 
 class DeepSpeech extends Component {
   state = {
-    file: "",
-    result: ""
+    file: '',
+    result: '',
   };
   onChangeFile = e => {
     this.setState({
-      file: e.target.files[0]
+      file: e.target.files[0],
     });
-    console.log("asdf" + this.state.file);
+    console.log('asdf' + this.state.file);
   };
   submit = () => {
     var complete = api.deepSpeech(this.state.file);
-    console.log("submit");
+    console.log('submit');
   };
 
   render() {

@@ -1,4 +1,4 @@
-# react-DeepSpeech [![npm](https://img.shields.io/npm/v/react-deepspeech.svg)]((https://www.npmjs.com/package/react-deepspeech))
+# react-DeepSpeech [![npm](https://img.shields.io/npm/v/react-deepspeech.svg)](<(https://www.npmjs.com/package/react-deepspeech)>)
 
 [![npm downloads](https://img.shields.io/npm/dm/react-deepspeech.svg)](https://www.npmjs.com/package/react-deepspeech)
 
@@ -12,7 +12,7 @@ this is component using react and morzilla/DeepSpeech.
 
 ## :sweat: Sorry for users
 
->  this is not yet built the publish version. 
+> this is not yet built the publish version.
 
 ## 💡 Motivation
 
