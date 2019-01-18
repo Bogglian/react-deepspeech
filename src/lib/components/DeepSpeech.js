@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './deepspeech.css';
+// import './build/index.css';
 import * as api from '../../deepSpeechModule.js';
 
 class DeepSpeech extends Component {
