@@ -27,6 +27,13 @@ No one made a valid repository for DeepSpeech and we made it our own.
 
 ## Our props
 
+|Title |Type  |Describe           |Usage                          |
+|:----:|:----:|:------------------|:------------------------------|
+|file  |string|file path or buffer|file={filepath}                |
+|width |number|component width    |width="100%" or width="80rem"  |
+|height|number|component height   |height="100%" or height="80rem"|
+|theme |string|component theme    |theme="basic"                  | 
+
 ## How can I contribute to this project?
 
 First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/Bogglian/react-DeepSpeech/issues)) or contribute to it in [pull requests](https://github.com/Bogglian/react-DeepSpeech/pulls).
