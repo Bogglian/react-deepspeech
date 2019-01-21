@@ -1,15 +1,15 @@
-//#!/usr/bin/env node
+// #!/usr/bin/env node
 
 const Fs = require('fs');
 const Sox = require('sox-stream');
-const DeepSpeech = require('deepspeech');
+// const DeepSpeech = require('deepspeech');
 const MemoryStream = require('memory-stream');
 const Wav = require('node-wav');
 const Duplex = require('stream').Duplex;
 const util = require('util');
 
 export function deepSpeech(audio) {
-  var complete = '';
+  let complete = '';
   // These constants control the beam search decoder
 
   // Beam width used in the CTC decoder when building candidate transcriptions
@@ -48,20 +48,20 @@ export function deepSpeech(audio) {
 
   if (result.sampleRate < 16000) {
     console.error(
-      'Warning: original sample rate (' +
-        result.sampleRate +
-        ') is lower than 16kHz. Up-sampling might produce erratic speech recognition.',
+      `Warning: original sample rate (${ 
+        result.sampleRate 
+        }) is lower than 16kHz. Up-sampling might produce erratic speech recognition.`,
     );
   }
 
   function bufferToStream(buffer) {
-    let stream = new Duplex();
+    const stream = new Duplex();
     stream.push(buffer);
     stream.push(null);
     return stream;
   }
 
-  let audioStream = new MemoryStream();
+  const audioStream = new MemoryStream();
   bufferToStream(buffer)
     .pipe(
       Sox({
@@ -82,11 +82,11 @@ export function deepSpeech(audio) {
     .pipe(audioStream);
 
   audioStream.on('finish', () => {
-    let audioBuffer = audioStream.toBuffer();
+    const audioBuffer = audioStream.toBuffer();
 
     console.error('Loading model from file %s', MODEL);
     const model_load_start = process.hrtime();
-    let model = new DeepSpeech.Model(
+    const model = new DeepSpeech.Model(
       MODEL,
       N_FEATURES,
       N_CONTEXT,
