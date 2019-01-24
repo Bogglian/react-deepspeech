@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Editor } from './Editor';
 import * as api from '../../DeepSpeechModule.js';
 
 class DeepSpeech extends Component {
@@ -10,20 +9,11 @@ class DeepSpeech extends Component {
     console.log('file: ' + this.state.file);
   };
 
-  handleSubmit = () => {
-    var complete = api.deepSpeech(this.state.file);
-    console.log('submit');
-  };
-
+  
   render() {
-    const { input, styles, onChangeInpurt } = this.props;
+    const { input, onChangeInpurt } = this.props;
     return (
-      <div styles={JSON.stringify(styles)}>
-        <Editor
-          input={input}
-          onChange={onChangeInpurt}
-          onSubmit={this.handleSubmit}
-        />
+      <div>
         <form>
           <div>
             <label for="fileUpload">UPLOAD</label>
