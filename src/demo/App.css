@@ -1,0 +1,27 @@
+div.CodeMirror {
+    height: 80vh;
+    font-size: 20px;
+    width: 100%;
+}
+.save-btn{
+    right: 50%;
+    bottom: 15%;
+    float : right;
+    position: fixed;
+}
+.deepSpeechStyles{
+  width: 10%;
+  height: 10%;
+  bottom: 0px;
+  position:fixed;
+}
+.viewerStyles{
+    overflow: auto;
+    width:50%;
+    height:700px;
+}
+.editorStyles{
+    width:50%;
+    height:90%;
+    float:left;
+}
