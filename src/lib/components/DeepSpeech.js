@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as api from '../../DeepSpeechModule.js';
 
 class DeepSpeech extends Component {
   handleChangeFile = e => {
@@ -8,7 +7,9 @@ class DeepSpeech extends Component {
     });
     console.log('file: ' + this.state.file);
   };
-
+  handleFileSubmit=()=>{
+    this.props.fileSubmit(this.state.file);
+  }
   
   render() {
     const { input, onChangeInpurt } = this.props;
@@ -24,6 +25,7 @@ class DeepSpeech extends Component {
               onChange={this.handleChangeFile}
               accept=".wav, .raw, .mp3, .mp4, .flex, .m4a"
             />
+            <input type="button" onClick={this.fileSubmit} value="start STT"/>
           </div>
         </form>
       </div>

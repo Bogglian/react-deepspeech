@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Controlled as Editor} from 'react-codemirror2'
 import * as Viewer from 'react-markdown';
 import { DeepSpeech} from '../lib';
+import * as api from "../lib/api";
 import './App.css'
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
@@ -49,6 +50,21 @@ class App extends Component {
       input: ""
     }; 
   }
+  fileSubmit =async(file)=>{
+    const formData = new FormData();
+    formData.append("audiofile", file);
+
+    const headers = {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data"
+      }
+    };
+    let result = api.dsFile(forData,headers);
+    this.setState({
+      input: result
+    })
+  };
 
   handleChangeInput = e => {
     this.setState({
@@ -57,7 +73,6 @@ class App extends Component {
   };
 
   handleSubmit = () => {
-    var complete = api.deepSpeech(this.state.file);
     console.log('submit');
   };
   
@@ -82,6 +97,7 @@ class App extends Component {
         <div className="deepSpeechStyles">
           <DeepSpeech 
             input={this.state.input}
+            fileSubmit={this.fileSubmit}
           />
         </div>
         <div className="viewerStyles">

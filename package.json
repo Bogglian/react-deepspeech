@@ -34,7 +34,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "demo": "node scripts/demo.js"
+    "demo": "node scripts/demo.js",
+    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\""
   },
   "dependencies": {
     "@babel/core": "7.1.6",
