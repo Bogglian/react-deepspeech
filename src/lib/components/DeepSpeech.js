@@ -5,10 +5,20 @@ class DeepSpeech extends Component {
     this.setState({
       file: e.target.files[0],
     });
-    console.log('file: ' + this.state.file);
+   // console.log('file: ' + this.state.file);
   };
-  handleFileSubmit=()=>{
-    this.props.fileSubmit(this.state.file);
+
+  handleFileSubmit = () => {
+	  
+    const formData = new FormData();
+    formData.append("audiofile", this.state.file);
+    const headers = {
+	    headers: {
+              Accept: "application/json",
+              "Content-Type": "multipart/form-data"
+	    }
+    };
+    this.props.fileSubmit(formData,headers);
   }
   
   render() {
@@ -25,7 +35,7 @@ class DeepSpeech extends Component {
               onChange={this.handleChangeFile}
               accept=".wav, .raw, .mp3, .mp4, .flex, .m4a"
             />
-            <input type="button" onClick={this.fileSubmit} value="start STT"/>
+            <input type="button" onClick={this.fileSubmit} value="start STT" />
           </div>
         </form>
       </div>

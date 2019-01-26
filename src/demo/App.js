@@ -50,17 +50,9 @@ class App extends Component {
       input: ""
     }; 
   }
-  fileSubmit =async(file)=>{
-    const formData = new FormData();
-    formData.append("audiofile", file);
 
-    const headers = {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "multipart/form-data"
-      }
-    };
-    let result = api.dsFile(forData,headers);
+  fileSubmit = async(formData,headers) => {
+    const result = api.dsFile(forData,headers);
     this.setState({
       input: result
     })

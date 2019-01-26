@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require("body-parser")
 const fileUpload = require("express-fileupload")
-const deepspeech = require('./router/deepspeechRouter')
+const deepspeech = require('./router/deepspeechRoute')
 const app = express()
 
 //middleware
