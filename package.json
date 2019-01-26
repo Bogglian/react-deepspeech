@@ -40,6 +40,7 @@
   "dependencies": {
     "@babel/core": "7.1.6",
     "@svgr/webpack": "2.4.1",
+    "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
@@ -47,9 +48,11 @@
     "babel-plugin-named-asset-import": "^0.3.0",
     "babel-preset-react-app": "^7.0.0",
     "bfj": "6.1.1",
+    "body-parser": "^1.18.3",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "codemirror": "^5.43.0",
+    "concurrently": "^4.1.0",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
@@ -62,6 +65,9 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-static": "^1.2.6",
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs": "^0.0.1-security",
@@ -75,6 +81,7 @@
     "mini-css-extract-plugin": "0.4.3",
     "node-sass": "^4.11.0",
     "node-wav": "0.0.2",
+    "nodemon": "^1.18.9",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -89,6 +96,8 @@
     "react-markdown": "^4.0.6",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "socket.io": "^2.2.0",
+    "socket.io-stream": "^0.9.1",
     "sox-stream": "^2.0.3",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
@@ -196,5 +205,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "node-deepspeech": "^0.1.412"
   }
 }
