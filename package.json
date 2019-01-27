@@ -34,7 +34,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "demo": "node scripts/demo.js"
+    "demo": "node scripts/demo.js",
+    "pre": "node preinstall.js"
   },
   "dependencies": {
     "@babel/core": "7.1.6",
@@ -195,5 +196,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "progress": "^2.0.3",
+    "tar": "^4.4.8",
+    "wget-improved": "^3.0.2"
   }
 }
