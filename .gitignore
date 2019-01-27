@@ -28,3 +28,6 @@ models/
 # pre-install files
 audio.tar.gz
 models.tar.gz
+
+# demo
+demo
