@@ -8,7 +8,7 @@
 
 It started in Jan 14, 2019
 
-this is component using react and morzilla/DeepSpeech.
+this is component using react and node-DeepSpeech.
 
 ## :sweat: Sorry for users
 
@@ -16,7 +16,7 @@ this is component using react and morzilla/DeepSpeech.
 
 ## 💡 Motivation
 
-No one made a valid repository for DeepSpeech and we made it our own.
+No one made a valid react project for Mozilla/DeepSpeech and we made it our own.
 
 ## Git history by January 28, 2019
 
@@ -41,7 +41,7 @@ No one made a valid repository for DeepSpeech and we made it our own.
 
 ## How can I contribute to this project?
 
-First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/Bogglian/react-DeepSpeech/issues) or contribute to it in [pull requests](https://github.com/Bogglian/react-DeepSpeech/pulls).
+First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/teamthesol/react-DeepSpeech/issues) or contribute to it in [pull requests](https://github.com/teamthesol/react-DeepSpeech/pulls).
 
 ## License
 
