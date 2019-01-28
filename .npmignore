@@ -24,3 +24,7 @@ demo
 .travis.yml
 CHANGELOG.md
 README.md
+
+# pre-install files
+audio.tar.gz
+models.tar.gz

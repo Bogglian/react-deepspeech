@@ -24,3 +24,10 @@ yarn-error.log*
 
 # for data models
 models/
+
+# pre-install files
+audio.tar.gz
+models.tar.gz
+
+# demo
+demo
