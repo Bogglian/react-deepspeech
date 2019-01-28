@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 class InputFileForm extends Component {
   handleChangeFile = e => {
-    this.setState({
-      file: e.target.files[0],
-    });
-    console.log('file: ' + this.state.file);
+    this.props.handleChangeFile(e);
   };
 
   render() {

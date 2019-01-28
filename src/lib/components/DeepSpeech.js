@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { SViewer } from './Viewer';
 import { SEditor } from './Editor';
 import { SInputFileForm } from './InputFileForm';
-
+import * as api from '../api';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/markdown/markdown';
 import 'codemirror/theme/monokai.css';
@@ -13,6 +13,7 @@ class DeepSpeech extends Component {
     this.state = {
       input:
         '# Headline\n\n## sub-title\n\n* option\n  * sub-option1\n  * sub-option2\n\n> tip\n>\n> tipe contents\n\n\n```\ntest conetnts\n\ntest input\n\n```',
+      file:''
     };
   }
 
@@ -20,19 +21,14 @@ class DeepSpeech extends Component {
     this.setState({ input: value });
   };
 
-  handleSubmit = () => {
-    var complete = api.deepSpeech(this.state.file);
-    console.log('submit');
-  };
-
   handleChangeFile = e => {
     this.setState({
       file: e.target.files[0],
     });
-   // console.log('file: ' + this.state.file);
+   console.log('file: ' + this.state.file);
   };
 
-  handleFileSubmit = () => {
+   handleFileSubmit = () => {
 	  
     const formData = new FormData();
     formData.append("audiofile", this.state.file);
@@ -42,7 +38,9 @@ class DeepSpeech extends Component {
               "Content-Type": "multipart/form-data"
 	    }
     };
-    this.props.fileSubmit(formData,headers);
+     api.dsFile(formData, headers).then(result => {
+      this.handleBeforeChange(null,null,result.data.ds)
+    });
   }
   
   render() {
@@ -52,11 +50,11 @@ class DeepSpeech extends Component {
           input={this.state.input}
           onBeforeChange={this.handleBeforeChange}
         />
-        <SInputFileForm input={this.state.input} />
+        <SInputFileForm handleChangeFile={this.handleChangeFile} />
 
         <SViewer input={this.state.input} />
         <div>
-          <button onClick={this.handleSubmit}>Save</button>
+          <button onClick={this.handleFileSubmit}>Save</button>
         </div>
       </div>
     );
