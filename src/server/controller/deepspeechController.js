@@ -14,6 +14,11 @@ module.exports= function() {
                   next(saveErr)
                 }
                 ds.dsFile(`${__dirname}/../upload/${getFile.name}`).then(function (data){
+                    FS.unlink(`${__dirname}/../upload/${getFile.name}`,function(deleteErr){
+                        if(deleteErr){
+                            next(deleteErr)
+                        }
+                    })
                     res.status(201).json({ds:data})
                 }).catch(function (err){
                     next(err)
