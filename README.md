@@ -18,6 +18,11 @@ this is component using react and morzilla/DeepSpeech.
 
 No one made a valid repository for DeepSpeech and we made it our own.
 
+## Git history by January 28, 2019
+
+[![Git history by January 28, 2019](https://img.youtube.com/vi/KSYhz9a4CVg/0.jpg)](https://www.youtube.com/watch?v=KSYhz9a4CVg&feature=youtu.be)
+
+
 ## 🏃‍♀️🏃‍♂️QuickStart
 
 ## 🔧 Used Opensources
