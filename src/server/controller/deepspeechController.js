@@ -8,10 +8,17 @@ module.exports= function() {
                 next()
             }
             console.log(`write board with file filename: ${req.files.audiofile.name}`)
-            let getFile = Buffer.from(req.files.audiofile)
-            let result = ds.dsFile(getFile)
-	    console.log(result)
-            res.status(201).json({ds:result})
+            let getFile = req.files.audiofile
+            getFile.mv(`${__dirname}/../upload/${getFile.name}`, function(saveErr) {
+                if (saveErr) {
+                  next(saveErr)
+                }
+                ds.dsFile(`${__dirname}/../upload/${getFile.name}`).then(function (data){
+                    res.status(201).json({ds:data})
+                }).catch(function (err){
+                    next(err)
+                })
+            })
         }
     }
 }
