@@ -27,9 +27,12 @@ class DeepSpeech extends Component {
     });
    console.log('file: ' + this.state.file);
   };
+  
+  handleAddResult = value => {
+    this.setState(prevState => ({input: prevState.input + value}));
+  }
 
    handleFileSubmit = () => {
-	  
     const formData = new FormData();
     formData.append("audiofile", this.state.file);
     const headers = {
@@ -39,7 +42,7 @@ class DeepSpeech extends Component {
 	    }
     };
      api.dsFile(formData, headers).then(result => {
-      this.handleBeforeChange(null,null,result.data.ds)
+      this.handleAddResult("\n```\n"+result.data.ds+"\n```\n")
     });
   }
   
