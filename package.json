@@ -1,6 +1,6 @@
 {
   "name": "react-deepspeech",
-  "version": "0.2.4",
+  "version": "0.2.44",
   "private": false,
   "keywords": [
     "deepspeech",
@@ -31,11 +31,10 @@
     }
   ],
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "concurrently \"yarn nodemon ./src/server/index.js \" \"node scripts/start.js\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "demo": "node scripts/demo.js",
-    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\"",
     "pre": "node preinstall.js"
   },
   "dependencies": {
@@ -80,6 +79,7 @@
     "jest-resolve": "^23.6.0",
     "memory-stream": "0.0.3",
     "mini-css-extract-plugin": "0.4.3",
+    "node-deepspeech": "^0.1.5",
     "node-sass": "^4.11.0",
     "node-wav": "0.0.2",
     "nodemon": "^1.18.9",
@@ -210,7 +210,6 @@
     ]
   },
   "devDependencies": {
-    "node-deepspeech": "^0.1.412",
     "progress": "^2.0.3",
     "tar": "^4.4.8",
     "wget-improved": "^3.0.2"
