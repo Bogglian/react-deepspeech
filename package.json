@@ -37,7 +37,6 @@
     "demo": "node scripts/demo.js",
     "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\"",
     "pre": "node preinstall.js"
-
   },
   "dependencies": {
     "@babel/core": "7.1.6",
