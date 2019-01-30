@@ -7,7 +7,6 @@ class InputFileForm extends Component {
   };
 
   render() {
-    const { input } = this.props;
     return (
       <div>
         <form>
