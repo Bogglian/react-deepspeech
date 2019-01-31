@@ -1,6 +1,6 @@
 {
   "name": "react-deepspeech",
-  "version": "0.2.44",
+  "version": "0.2.49",
   "private": false,
   "keywords": [
     "deepspeech",
@@ -13,12 +13,12 @@
   ],
   "author": "Rayleigh Ko <gmj1197@gmail.com>",
   "bugs": {
-    "url": "https://github.com/Bogglian/react-DeepSpeech/issues"
+    "url": "https://github.com/teamthesol/react-DeepSpeech/issues"
   },
-  "homepage": "https://github.com/Bogglian/react-DeepSpeech",
+  "homepage": "https://github.com/teamthesol/react-DeepSpeech",
   "contributors": [
     {
-      "name": "Myungjin Ko",
+      "name": "Rayleigh Ko",
       "email": "gmj1197@gmail.com"
     },
     {
@@ -34,7 +34,6 @@
     "start": "concurrently \"yarn nodemon ./src/server/index.js \" \"node scripts/start.js\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "demo": "node scripts/demo.js",
     "pre": "node preinstall.js"
   },
   "dependencies": {
@@ -112,7 +111,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Bogglian/react-DeepSpeech.git"
+    "url": "git@github.com:teamthesol/react-DeepSpeech.git"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
